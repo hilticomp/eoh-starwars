@@ -1,0 +1,67 @@
+<!--<ion-view>
+		<ion-nav-title>
+			<div class="bar bar-header">
+  
+  <h1 class="title">List of Searched People</h1>
+  
+</div>
+       </ion-nav-title>
+	
+		<ion-content class="starwars-title-bg-inner padding">
+		<div class="starwars-lists">
+              
+			<li class="starwars-orders" ng-repeat="person in people">
+				    <div>
+					<ul>
+						
+						<li>{{person.name}}</li>
+					</ul>
+					</div>
+					
+				</li>
+				<div class="starwars-orders" ng-show="people == true">
+				
+				<div class ="starwars-service-box">
+				    No people found
+				</div>
+			</div>
+            
+			<nav>
+              <ul class="pagination">
+                
+                <li ng-repeat='num in pageNumbers track by $index'>
+                  <a ui-sref='search({page: num,searchTerm: searchTerm})'> {{num}}</a>
+                </li>
+                
+              </ul>
+            </nav>
+			
+		</div>
+		</ion-content>
+	
+	</ion-view>-->
+
+<ion-view>
+		<ion-nav-title>
+			<div class="bar bar-header">
+              
+              <button class="button button-small button-balanced" ui-sref='people'>Home</button>
+              <h1 class="title">Search People</h1>
+
+              <button class="button button-small button-balanced" ui-sref='nearme'>Near Me</button>
+            </div>
+       </ion-nav-title>
+    
+    <ion-content>
+<div class="list list-inset">
+  <label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="text" placeholder="Search People">
+  </label>
+    
+</div>
+
+        
+        </ion-content>
+	
+	</ion-view>

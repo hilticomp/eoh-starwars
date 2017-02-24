@@ -1,0 +1,40 @@
+<ion-view>
+		<ion-nav-title>
+			<div class="bar bar-header">
+              
+              <button class="button button-small button-balanced" ui-sref='search'>Search</button>
+              <h1 class="title">List of People</h1>
+
+              <button class="button button-small button-balanced" ui-sref='nearme'>Near Me</button>
+            </div>
+       </ion-nav-title>
+	
+        <ion-content>
+            
+		<div class="list" ng-repeat="person in people"  ui-sref='person({personUrl: person.url})'>
+
+         
+            
+         <a class="item item-icon-left item-icon-right" href="#">
+            <i class="icon ion-person"></i>
+            {{person.name}}
+            <i class="icon ion-arrow-right-c"></i>
+          </a>
+
+        </div>
+        
+            
+			<nav>
+              <ul>
+                
+                <li ng-repeat='num in pageNumbers track by $index'>
+                  <a ui-sref='people({page: num})'> {{num}}</a>
+                </li>
+               
+              </ul>
+            </nav>
+			
+		
+		</ion-content>
+	
+	</ion-view>
