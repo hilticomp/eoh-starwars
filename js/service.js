@@ -17,30 +17,7 @@ App.service('WebService', function($http) {
         }
     
         this.pages[page] = res.data.results;
-        //TODO
-        /*var results = [];
-        var person = {};
-        var apiUrl;
-          
-        for(var i = 0 ; i<res.data.results.length; i++){
-            
-            var person = res.data.results[i];
-            
-            var apiUrl = res.data.results[i].species[0];
-
-            $http.get(apiUrl).then(function(resp){
-                
-                var species = resp.data;
-                results.push([person,species]);
-
-          }, function(err){
-
-          })
         
-        
-        }
-          
-          this.pages[page] = results;*/
           
       }, err => {
         console.error('WebService error:', err);

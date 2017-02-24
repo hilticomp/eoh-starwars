@@ -105,9 +105,10 @@ App.controller('nearmeCtrl', function($scope,$http, $ionicModal,$rootScope,$wind
             //Wait until the map is loaded
             google.maps.event.addListenerOnce($scope.map, 'idle', function(){
                     
+          //TO DO add this to a config file
           var nearbysearchapiEndPoint ='https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=';
 
-          $scope.API = nearbysearchapiEndPoint + position.coords.latitude + "," + position.coords.longitude + "&radius=10000&type=comic store&key=AIzaSyD8Or6tO3h801EW-QtIDI_VG-93B5OnoIM";
+          $scope.API = nearbysearchapiEndPoint + position.coords.latitude + "," + position.coords.longitude + "&radius=10000&type=comic store&key=AIzaSyD8Or6tO3h801EW-QtIDI_VG-93B5OnoIM"; //TODO add the key to the config file
                 
           $http.get($scope.API).success(function (response) {
 
